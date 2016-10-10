@@ -7,6 +7,7 @@ import org.hibernate.service.ServiceRegistry;
 import org.hibernate.service.ServiceRegistryBuilder;
 
 /**
+<<<<<<< HEAD
  * @author Asier Burguete Lacabe
  */
 public class HibernateSession {
