@@ -7,6 +7,9 @@
 <hibernate-mapping package="at.eartbe.h.backend.data.model">
 
 	<class name="UserRole" table="USER_ROLE">
+		<id name="id" column="ID">
+			<generator class="identity" />
+		</id>
 		<property name="idUser" column="IDUSER" />
 		<property name="idRole" column="IDROLE" />
 	</class>
