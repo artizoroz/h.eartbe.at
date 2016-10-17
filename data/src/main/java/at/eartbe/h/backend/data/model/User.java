@@ -5,10 +5,12 @@ package at.eartbe.h.backend.data.model;
  */
 
 public class User {
-	public Long id;
-	public String username;
-	public String password;
-	public String email;
+	private Long id;
+	private String username;
+	private String password;
+	private String email;
+	private Avatar avatar;
+	
 	/**
 	 * @return the id
 	 */

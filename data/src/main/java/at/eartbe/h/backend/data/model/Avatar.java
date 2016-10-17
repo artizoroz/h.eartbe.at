@@ -8,9 +8,10 @@ package at.eartbe.h.backend.data.model;
  *
  */
 public class Avatar {
-	private Integer id;
+	private Long Id;
 	private String description;
 	private String image;
+	private User user;
 	/**
 	 * 
 	 */
@@ -22,23 +23,23 @@ public class Avatar {
 	 * @param description
 	 * @param image
 	 */
-	public Avatar(Integer id, String description, String image) {
+	public Avatar(Long id, String description, String image) {
 		super();
-		this.id = id;
+		this.Id = id;
 		this.description = description;
 		this.image = image;
 	}
 	/**
 	 * @return the id
 	 */
-	public Integer getId() {
-		return id;
+	public Long getId() {
+		return Id;
 	}
 	/**
 	 * @param id the id to set
 	 */
-	public void setId(Integer id) {
-		this.id = id;
+	public void setId(Long id) {
+		this.Id = id;
 	}
 	/**
 	 * @return the description
