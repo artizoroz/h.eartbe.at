@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<!-- Mapping configuration details between Customer class and customer table -->
+<hibernate-mapping package="org.sistema.data.Test.model">
+
+	<class name="Beat" table="BEAT">
+		<id name="id" column="ID">
+			<generator class="identity" />
+		</id>
+		<property name="message" column="MESSAGE" />
+		<property name="beat_date" column="BEAT_DATE" />
+		<property name="latitude" column="LATITUDE" />
+		<property name="longitude" column="LONGITUDE" />
+		<many-to-one name="userFrom" column="USERFROM" />
+		<many-to-one name="userTo" column="USERTO" />
+	</class>
+
+</hibernate-mapping>
