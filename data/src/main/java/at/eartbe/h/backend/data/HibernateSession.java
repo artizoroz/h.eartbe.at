@@ -35,7 +35,6 @@ public class HibernateSession {
 				.buildSessionFactory(serviceRegistry);
 		return sessionFactory;
 	}
-
 	/**
 	 * this gives the desired session factory
 	 * 
@@ -44,7 +43,6 @@ public class HibernateSession {
 	public static SessionFactory getSessionFactory() {
 		return sessionFactory;
 	}
-
 	/**
 	 * gives the current Session
 	 * 
@@ -57,3 +55,4 @@ public class HibernateSession {
 		return session;
 	}
 }
+
