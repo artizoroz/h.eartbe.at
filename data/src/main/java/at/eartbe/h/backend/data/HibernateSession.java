@@ -7,7 +7,14 @@ import org.hibernate.service.ServiceRegistry;
 import org.hibernate.service.ServiceRegistryBuilder;
 
 /**
- * @author Asier Burguete Lacabe
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+ * Represents a entity which handles the session with the database.
+ * 
+ * @author Eugenia Pérez Martínez
+>>>>>>> refs/remotes/origin/segoitz_guibert
  */
 public class HibernateSession {
 	private static final SessionFactory sessionFactory = buildSessionFactory();
