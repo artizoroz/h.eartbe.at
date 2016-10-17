@@ -7,9 +7,8 @@ import org.hibernate.service.ServiceRegistry;
 import org.hibernate.service.ServiceRegistryBuilder;
 
 /**
- * Represents a entity which handles the session with the database.
- * 
- * @author Eugenia Pérez Martínez
+<<<<<<< HEAD
+ * @author Asier Burguete Lacabe
  */
 public class HibernateSession {
 	private static final SessionFactory sessionFactory = buildSessionFactory();
