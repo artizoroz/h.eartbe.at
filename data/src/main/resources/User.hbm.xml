@@ -15,7 +15,7 @@
 		<property name="email" column="EMAIL" />
 		<set name="roles" table="USERROLE"
             inverse="false" lazy="false" fetch="select" cascade="all">
-            <key column="iduser" />
+            <key column="idUser" />
             <many-to-many column="idrole" class="Role" />
         </set>
 	</class>

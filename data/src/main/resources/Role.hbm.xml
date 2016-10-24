@@ -14,7 +14,7 @@
 		<property name="description" column="DESCRIPTION" />
 		<set name="users" table="USERROLE"
             inverse="true" lazy="false" fetch="select">
-            <key column="iduser" />
+            <key column="idRole" />
             <many-to-many column="idrole" class="Role" />
         </set>
 	</class>
