@@ -1,5 +1,9 @@
 package at.eartbe.h.backend.data.model;
 
+import java.util.HashSet;
+import java.util.Set;
+
+
 /**
  * @author Asier Burguete Lacabe
  */
@@ -10,6 +14,7 @@ public class User {
 	private String password;
 	private String email;
 	private Avatar avatar;
+	private Set<Role> roles = new HashSet<Role>();
 	
 	/**
 	 * @return the id
@@ -58,6 +63,32 @@ public class User {
 	 */
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	
+	
+	/**
+	 * @return the avatar
+	 */
+	public Avatar getAvatar() {
+		return avatar;
+	}
+	/**
+	 * @param avatar the avatar to set
+	 */
+	public void setAvatar(Avatar avatar) {
+		this.avatar = avatar;
+	}
+	/**
+	 * @return the roles
+	 */
+	public Set<Role> getRoles() {
+		return roles;
+	}
+	/**
+	 * @param roles the roles to set
+	 */
+	public void setRoles(Set<Role> roles) {
+		this.roles = roles;
 	}
 	/**
 	 * @param id

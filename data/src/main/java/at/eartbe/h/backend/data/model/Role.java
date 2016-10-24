@@ -3,6 +3,11 @@
  */
 package at.eartbe.h.backend.data.model;
 
+import java.util.HashSet;
+import java.util.Set;
+
+
+
 /**
  * @author egoitz
  *
@@ -11,6 +16,7 @@ public class Role {
 	public Long id;
 	public String name;
 	public String description;
+	private Set<User> users = new HashSet<User>();
 	/**
 	 * @return the id
 	 */
@@ -62,4 +68,18 @@ public class Role {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+	/**
+	 * @return the users
+	 */
+	public Set<User> getUsers() {
+		return users;
+	}
+	/**
+	 * @param users the users to set
+	 */
+	public void setUsers(Set<User> users) {
+		this.users = users;
+	}
+	
+	
 }

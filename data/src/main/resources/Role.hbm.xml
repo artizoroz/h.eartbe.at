@@ -12,7 +12,11 @@
 		</id>
 		<property name="name" column="NAME" />
 		<property name="description" column="DESCRIPTION" />
-
+		<set name="users" table="USERROLE"
+            inverse="true" lazy="false" fetch="select">
+            <key column="iduser" />
+            <many-to-many column="idrole" class="Role" />
+        </set>
 	</class>
 
 </hibernate-mapping>
