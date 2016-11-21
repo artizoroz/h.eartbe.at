@@ -18,9 +18,9 @@ public class UserMain {
 	/**
 	 * @param args
 	 */
-	public static void showAll(UserDAO UserDAO) {
+	public static void showAll(UserDAO userDAO) {
 		// SELECT ALL DATA
-		List<User> users = UserDAO.selectAll();
+		List<User> users = userDAO.selectAll(User.class);
 		System.out.println("--- USER ----- table contents	-----------");
 		for (User user : users) {
 			System.out.println("Id: " + user.getId());
@@ -45,7 +45,7 @@ public class UserMain {
 		showAll(userDAO);
 		
 		// SELECT JUST ONE
-		User oneUser = userDAO.selectById(Long.valueOf(1));
+		User oneUser = userDAO.selectById(Long.valueOf(1), User.class);
 		System.out.println("\nShow the user with ID=1");
 		System.out.println("--- USER ----- table contents	-----------");
 		System.out.println("Selected Name: " + oneUser.getUsername());

@@ -11,16 +11,8 @@ import at.eartbe.h.backend.data.model.User;
  * @author Asier
  *
  */
-public interface UserDAO {
+public interface UserDAO extends GenericDAO<User> {
 
-	public User selectById(Long id);
-
-	public List<User> selectAll();
-
-	public void insert(User user);
-
-	public void update(User user);
-
-	public void delete(User user);
+	public User selectByUsername(String name);
 
 }

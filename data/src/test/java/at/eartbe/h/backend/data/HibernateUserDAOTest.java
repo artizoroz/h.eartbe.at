@@ -44,7 +44,7 @@ public class HibernateUserDAOTest {
 		// Select after insert
 		User insertUser = new User(1234567l, "Username", "Pass", "email@email.com");
 		userDAO.insert(insertUser);
-		User role = userDAO.selectById(insertUser.getId());
+		User role = userDAO.selectById(insertUser.getId(), User.class);
 		assertEquals("Select by Id should exist", role.getId(), insertUser.getId());
 	}
 
@@ -54,11 +54,11 @@ public class HibernateUserDAOTest {
 	 */
 	@Test
 	public void testSelectAll() {
-		int totalElements = userDAO.selectAll().size();
+		int totalElements = userDAO.selectAll(User.class).size();
 
 		User insertUser = new User(1234567l, "Username", "Pass", "email@email.com");
 		userDAO.insert(insertUser);
-		int totalElementsAfterInsert = userDAO.selectAll().size();
+		int totalElementsAfterInsert = userDAO.selectAll(User.class).size();
 
 		assertEquals("Select All returns all elements", totalElements + 1, totalElementsAfterInsert);
 
@@ -90,7 +90,7 @@ public class HibernateUserDAOTest {
 		userDAO.update(insertUser);
 
 		// Select and check if username has changed
-		User updatedUser = userDAO.selectById(insertUser.getId());
+		User updatedUser = userDAO.selectById(insertUser.getId(), User.class);
 
 		assertEquals("User usernam was changed", updatedUsername, updatedUser.getUsername());
 	}
@@ -107,7 +107,7 @@ public class HibernateUserDAOTest {
 
 		// Delete
 		userDAO.delete(insertUser);
-		User user = userDAO.selectById(insertUser.getId());
+		User user = userDAO.selectById(insertUser.getId(), User.class);
 		assertNull("Select by Id with a deleted record id shoud be null", user);
 	}
 
