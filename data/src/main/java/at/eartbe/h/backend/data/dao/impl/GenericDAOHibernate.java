@@ -60,8 +60,14 @@ public class GenericDAOHibernate<T> implements GenericDAO<T> {
 	}
 
 	public void insert(T entity) throws HibernateException {
-		// TODO Auto-generated method stub
-		
+		try {
+			start();
+			getSession().save(entity);
+		} catch (HibernateException he) {
+			handleException(he);
+		} finally {
+			end();
+		}
 	}
 
 	public void update(T entity) throws HibernateException {
