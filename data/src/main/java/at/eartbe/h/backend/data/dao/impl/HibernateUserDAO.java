@@ -20,7 +20,6 @@ import at.eartbe.h.backend.data.model.User;
  */
 public class HibernateUserDAO extends GenericDAOHibernate<User> implements UserDAO {
 
-	@Override
 	public User selectByUsername(String name) {
 		// TODO Auto-generated method stub
 		return null;

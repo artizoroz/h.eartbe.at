@@ -43,7 +43,6 @@ public class GenericDAOHibernate<T> implements GenericDAO<T> {
 
 	
 
-	@Override
 	public List<T> selectAll(Class entityClass) throws HibernateException {
 		List<T> result = null;
 		try {
@@ -60,13 +59,11 @@ public class GenericDAOHibernate<T> implements GenericDAO<T> {
 		return result;
 	}
 
-	@Override
 	public void insert(T entity) throws HibernateException {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
 	public void update(T entity) throws HibernateException {
 		try {
 			start();
@@ -81,7 +78,6 @@ public class GenericDAOHibernate<T> implements GenericDAO<T> {
 		
 	}
 
-	@Override
 	public void delete(T entity) throws HibernateException {
 		try {
 			start();
@@ -94,7 +90,6 @@ public class GenericDAOHibernate<T> implements GenericDAO<T> {
 		}
 	}
 
-	@Override
 	public T selectById(Serializable id, Class<T> entityClass) throws HibernateException {
 			T obj = null;
 			try {
